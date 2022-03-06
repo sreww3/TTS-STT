@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+    </div>
+    <button id='pre'>이전</button>
+    <button id='re'>다시재생</button>
+    <button id='next'>다음</button>
+    <script>
+        var arr = ['one','two','three']
+
+        step = ''
+        cnt = 0
+        $(function(){
+            $('div').html('<h1>'+arr[cnt]+'</h1>')
+            $('#pre').click(function(){
+                cnt -= 1
+                $('div').html('<h1>'+arr[cnt]+'</h1>')
+            })
+            $('#re').click(function(){
+                $('div').html('<h1>'+arr[cnt]+'</h1>')
+            })
+            $('#next').click(function(){
+                cnt += 1
+                $('div').html('<h1>'+arr[cnt]+'</h1>')
+            })
+        })
+    </script>
+    
+</body>
+</html>
